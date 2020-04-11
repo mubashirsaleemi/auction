@@ -42,9 +42,9 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 
 
-define('BASEURL', 'http://localhost/auction_home/');
+define('BASEURL', $_SERVER['HTTP_HOST'] == 'localhost' ? 'http://localhost/auction_home/' : 'https://staging.mubashirahmed.com/');
 define('CSS', BASEURL.'asset/css/');
 define('JS', BASEURL.'asset/js/');
 define('IMG', BASEURL.'asset/img/');
-define('UPLOADS', 'http://localhost/auction_home/admin/resources/uploads/');
+define('UPLOADS', BASEURL.'admin/resources/uploads/');
 // define('UPLOADS', 'http://admin.expotravels.co.uk/resources/uploads/');
