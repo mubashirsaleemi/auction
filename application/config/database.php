@@ -48,7 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-if($_SERVER['REMOTE_HOST'] == 'localhost'){
+if($_SERVER['HTTP_HOST'] == 'localhost'){
 	$db['default']['hostname'] = 'localhost';
 	$db['default']['username'] = 'root';
 	$db['default']['password'] = '';
