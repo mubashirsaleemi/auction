@@ -48,10 +48,18 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'auction_home';
+if($_SERVER['REMOTE_HOST'] == 'localhost'){
+	$db['default']['hostname'] = 'localhost';
+	$db['default']['username'] = 'root';
+	$db['default']['password'] = '';
+	$db['default']['database'] = 'auction_home';
+} else{
+	$db['default']['hostname'] = 'localhost';
+	$db['default']['username'] = 'mubashi3_auction';
+	$db['default']['password'] = 'h7[]UXaA?;l[';
+	$db['default']['database'] = 'mubashi3_auction';
+}
+
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
