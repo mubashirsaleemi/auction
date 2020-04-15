@@ -330,3 +330,16 @@ $(function(){
         </div>
     </div>
 </div>
+
+
+<script>
+    $('.manage-section .box').on('click', function() {
+        var name = $(this).attr('data-name');
+        var designation = $(this).attr('data-designation');
+        var inner = $(this).attr('data-inner');
+        $('.modal .name').text(name);
+        $('.modal .designation').text(designation);
+        $('.modal .modal-body p').text(inner);
+        $('#myModal').modal('show');
+    });
+</script>

@@ -2976,13 +2976,16 @@ a.submitbtn-career:hover{
 	/*text-decoration: underline !important;*/
 	opacity: 0.7;
 }
-.input-type input{
+.input-type input,
+.input-type-invalid input,
+.input-type-invalid textarea{
 	border: none;
 	border-bottom: 1px solid #eee;
 	outline: none;
 	box-shadow: none;
 }
-.input-type label{
+.input-type label,
+.input-type-invalid label{
 	position: absolute;
 	z-index: 1;
 	left: 25px;
@@ -2992,7 +2995,11 @@ a.submitbtn-career:hover{
 	transition: all .5s ease-in-out;
 }
 .input-type input:focus + label,
-.input-type input:valid + label{
+.input-type input:valid + label,
+.input-type-invalid input:focus + label,
+.input-type-invalid input:invalid + label,
+.input-type-invalid textarea:focus + label,
+.input-type-invalid textarea:invalid + label{
 	top: -5px;
 	left: 10px;
 	font-size: 10px;
@@ -3072,16 +3079,133 @@ a.submitbtn-career:hover{
 .management-team .manage-section .box p{
 	margin: 0;
 }
+.management-team .height-bar{
+	clip-path: polygon(0% 0%, 0 0, 100% 50%, 0 98%, 0% 100%);
+	width: 200px;
+	height: 207px;
+	margin: 0 auto;
+}
+.management-team .height-bar.right{
+	clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%, 0% 50%);
+}
+
+
+.pre_register h2{
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+.top-space{
+	margin-top: 40px;
+}
+.pre_register p{
+	margin-bottom: 20px;
+}
+.pre_register h4{
+	font-size: 15px;
+	text-transform: uppercase;
+}
+.pre_register h4 abbr{
+	color: #2196F3;
+	font-size: 14px;
+}
+.right-bar{
+	border-right: 1px solid #ddd;
+	height: 350px;
+}
+.radio-block{
+	background: #eee;
+	padding: 15px 20px;
+	margin-bottom: 10px;
+}
+.radio-block label{
+	font-size: 12px !important;
+	text-transform: uppercase;
+}
+.radio-block.no-need{
+	background: transparent;
+}
+
+.radio-block [type="radio"]:checked,
+.radio-block [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.radio-block [type="radio"]:checked + label,
+.radio-block [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+.radio-block [type="radio"]:checked + label:before,
+.radio-block [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+.radio-block [type="radio"]:checked + label:after,
+.radio-block [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #2196F3;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.radio-block [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.radio-block [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.right-align-member {
+	padding: 0 20px;
+}
+.right-align-member h5{
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.right-align-member p{
+	font-weight: 600;
+}
 
 
 @media only screen and (max-width: 991px) {
 	.management-team .three-section-block .col-md-4{
 		border: none !important;
 	}
+	.right-bar{
+		border: none;
+		display: none;
+	}
+	.management-team .height-bar{
+		height: 227px;
+	}
 }
 @media only screen and (max-width: 767px) {
 	.career-section .block-section{
 		width: 100%;
+	}
+	.management-team .height-bar{
+		display: none;
 	}
 }
 @media only screen and (max-width: 516px) {
@@ -3133,3 +3257,4 @@ a.submitbtn-career:hover{
         float: left;
     }
 }
+

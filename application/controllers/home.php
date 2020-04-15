@@ -16,7 +16,13 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-
+	/*function __construct() {
+		parent::__construct();
+		// Load url helper
+		$this->load->database();
+		$this->load->helper('url');
+	    $this->load->library('session');
+	}*/
 	/**
 	*
 
@@ -63,6 +69,18 @@ class Home extends CI_Controller {
 		$data['meta_key'] = 'Register Page';
 		$data['error'] = false;
 		$this->template('register',$data);	
+	}
+	public function pre_register()
+	{
+		if (isset($_SESSION['user']))
+		{
+			redirect('home/index');
+		}
+		$data['page_title'] = 'Register Page';
+		$data['meta_des'] = 'Register Page';
+		$data['meta_key'] = 'Register Page';
+		$data['error'] = false;
+		$this->template('pre_register',$data);	
 	}
 	public function post_user_form()
 	{
