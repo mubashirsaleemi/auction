@@ -56,16 +56,16 @@
                 <div class="row">
                     <div class="col-md-3">
                         <ul>
-                            <li><a href="javascript://">Home</a></li>
-                            <li><a href="javascript://">About Us</a></li>
+                            <li><a href="<?=BASEURL?>">Home</a></li>
+                            <li><a href="<?=BASEURL?>about">About Us</a></li>
                             <li><a href="javascript://">Commercial</a></li>
                             <li><a href="javascript://">Residential</a></li>
                         </ul>
                     </div><!-- /3 -->
                     <div class="col-md-3">
                         <ul>
-                            <li><a href="javascript://">Partner</a></li>
-                            <li><a href="javascript://">Careers</a></li>
+                            <li><a href="<?=BASEURL?>our_listing">Our Listing</a></li>
+                            <li><a href="<?=BASEURL?>management_team">Our Team</a></li>
                             <li><a href="javascript://">Real Estate Policy</a></li>
                             <li><a href="javascript://">Terms of Service</a></li>
                         </ul>
@@ -82,7 +82,7 @@
                         <ul>
                             <li><a href="javascript://">Fair Housing</a></li>
                             <li><a href="javascript://">DMCA</a></li>
-                            <li><a href="javascript://">Contact Us</a></li>
+                            <li><a href="<?=BASEURL?>contact">Contact Us</a></li>
                             <li><a href="javascript://">Get Help</a></li>
                         </ul>
                     </div><!-- /3 -->
@@ -166,7 +166,7 @@ $(document).ready(function(){
      //
     $('.js-contact-btn').on('click',function(e){
         e.preventDefault();
-        console.log('clicked');
+        // console.log('clicked');
         $("html, body").animate({ scrollTop: $('#contact-detail').offset().top }, 1000);
     });
     $('.bxslider').bxSlider({
@@ -176,6 +176,15 @@ $(document).ready(function(){
         prevSelector: '.slider-prev',
         nextText: '<img src="<?php echo base_url(); ?>asset/img/slider-next.png" alt="slider next" />',
         prevText: '<img src="<?php echo base_url(); ?>asset/img/slider-prev.png" alt="slider prev" />'
+    });
+    $('#pre_register_form').on('submit', function(event) {
+        var count_checked = $("[name='reason[]']:checked").length; // count the checked rows
+        if(count_checked == 0) 
+        {
+            alert("Please Select atleast One Option");
+            return false;
+            event.preventDefault();
+        }
     });
 });
 </script>

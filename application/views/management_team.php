@@ -56,7 +56,7 @@
 			<h3 class="text-center">Management Team</h3>
 			<div class="row">
 				<div class="col-sm-4">
-					<div class="box height-bar">
+					<div class=" height-bar">
 					</div>
 				</div><!-- /4 -->
 				<div class="col-sm-4">
@@ -69,7 +69,7 @@
 					</div>
 				</div><!-- /4 -->
 				<div class="col-sm-4">
-					<div class="box height-bar right">
+					<div class=" height-bar right">
 					</div>
 				</div><!-- /4 -->
 				<div class="col-sm-4">
@@ -129,7 +129,7 @@
 					</div>
 				</div><!-- /4 -->
 				<div class="col-sm-4">
-					<div class="box">
+					<div class="box"  data-name="TBD" data-designation="Associate" data-inner="TBD.">
 						<div class="img-section">
 							<!-- <img src="<?php echo base_url(); ?>asset/img/icon.png"> -->
 						</div><!-- /manage-section-img -->
@@ -138,7 +138,7 @@
 					</div>
 				</div><!-- /4 -->
 				<div class="col-sm-4">
-					<div class="box">
+					<div class="box"  data-name="TBD" data-designation="Associate" data-inner="TBD.">
 						<div class="img-section">
 							<!-- <img src="<?php echo base_url(); ?>asset/img/icon.png"> -->
 						</div><!-- /manage-section-img -->
@@ -147,7 +147,7 @@
 					</div>
 				</div><!-- /4 -->
 				<div class="col-sm-4">
-					<div class="box">
+					<div class="box"  data-name="TBD" data-designation="Associate" data-inner="TBD.">
 						<div class="img-section">
 							<!-- <img src="<?php echo base_url(); ?>asset/img/icon.png"> -->
 						</div><!-- /manage-section-img -->
@@ -197,7 +197,7 @@
 					</div>
 				</div><!-- /4 -->
 				<div class="col-sm-4">
-					<div class="box">
+					<div class="box"  data-name="TBD" data-designation="Associate" data-inner="TBD.">
 						<div class="img-section">
 							<!-- <img src="<?php echo base_url(); ?>asset/img/icon.png"> -->
 						</div><!-- /manage-section-img -->
@@ -206,7 +206,7 @@
 					</div>
 				</div><!-- /4 -->
 				<div class="col-sm-4">
-					<div class="box">
+					<div class="box"  data-name="TBD" data-designation="Associate" data-inner="TBD.">
 						<div class="img-section">
 							<!-- <img src="<?php echo base_url(); ?>asset/img/icon.png"> -->
 						</div><!-- /manage-section-img -->

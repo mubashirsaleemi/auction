@@ -48,7 +48,7 @@
 
 	.nav.navbar-nav.userButtons { margin-bottom:20px; }
 
-	.nav.navbar-nav li.menu-item-has-children a { pointer-events:none; }
+	/*.nav.navbar-nav li.menu-item-has-children a { pointer-events:none; }*/
 	.nav.navbar-nav li.menu-item-has-children .dropdown-menu li a { pointer-events:auto; }
 	.nav.navbar-nav li.menu-item-has-children .dropdown-menu li.menu-item-has-children a { pointer-events:none; }
 	.nav.navbar-nav li.menu-item-has-children .dropdown-menu li.menu-item-has-children .dropdown-menu li a { pointer-events:auto; }
@@ -118,7 +118,7 @@
 	.nav.navbar-nav .current { box-shadow: inset 4px 0px 0px #81be32; }
 	.nav.navbar-nav .current { box-shadow: inset 4px 0px 0px #2ecfbf; }
 
-	.nav.navbar-nav li.menu-item-has-children a { pointer-events:none; }
+	/*.nav.navbar-nav li.menu-item-has-children a { pointer-events:none; }*/
 	.nav.navbar-nav li.menu-item-has-children .dropdown-menu li a { pointer-events:auto; }
 	.nav.navbar-nav li.menu-item-has-children .dropdown-menu li.menu-item-has-children a { pointer-events:none; }
 	.nav.navbar-nav li.menu-item-has-children .dropdown-menu li.menu-item-has-children .dropdown-menu li a { pointer-events:auto; }

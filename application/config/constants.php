@@ -87,9 +87,15 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 
 
-define('BASEURL', 'http://localhost/auction_home/');
+if($_SERVER['SERVER_NAME'] == 'localhost'){
+	define('BASEURL', 'http://localhost/auction_home/');
+	define('UPLOADS', 'http://localhost/auction_home/admin/resources/uploads/');
+}else{
+	define('BASEURL', 'https://staging.mubashirahmed.com/');
+	define('UPLOADS', 'https://staging.mubashirahmed.com/admin/resources/uploads/');
+}
+
 define('CSS', BASEURL.'asset/css/');
 define('JS', BASEURL.'asset/js/');
 define('IMG', BASEURL.'asset/img/');
-define('UPLOADS', 'http://localhost/auction_home/admin/resources/uploads/');
 // define('UPLOADS', 'http://admin.expotravels.co.uk/resources/uploads/');

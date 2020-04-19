@@ -47,6 +47,7 @@
                 <!-- start login form -->
                 <div class="defaultTab">
                     <form method="post" action="<?php echo site_url('home/post_user_form'); ?>">
+                        <input type="hidden" name="reason" value="<?=$reason?>">
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-6">
                                 <div class="formBlock input-type">
@@ -85,8 +86,8 @@
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-6">
-                                <div class="formBlock input-type-invalid">
-                                <input type="text" name="phone" id="login" />
+                                <div class="formBlock input-type"><!-- /input-type-invalid -->
+                                <input type="text" required name="phone" id="login" />
                                 <label for="login">Office Phone </label>
                                 </div>
                             </div>
@@ -102,21 +103,21 @@
                                 <label for="login">City <span>*</span></label>
                                 </div>
                             </div>
-                            <div class="col-lg-12 col-md-12 col-sm-6">
-                                <div class="formBlock input-type-invalid">
+                            <!-- <div class="col-lg-12 col-md-12 col-sm-6">
+                                <div class="formBlock input-type">
                                 <input type="text" name="state" id="login" />
                                 <label for="login">State</label>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-lg-12 col-md-12 col-sm-6">
-                                <div class="formBlock input-type-invalid">
-                                <input type="text" name="zip_code" id="login" />
+                                <div class="formBlock input-type">
+                                <input type="text" required name="zip_code" id="login" />
                                 <label for="login">Zipcode</label>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-6">
-                                <div class="formBlock input-type-invalid">
-                                <textarea name="about"></textarea>
+                                <div class="formBlock input-type">
+                                <textarea name="about" required></textarea>
                                 <label for="login">About you</label>
                                 </div>
                             </div>

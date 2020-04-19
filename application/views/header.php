@@ -72,7 +72,7 @@
                     <li><a href="<?=BASEURL.'home/logout'?>">LOGOUT</a></li>
                 <?php else: ?>
                     <li><a href="<?=BASEURL.'home/login'?>">LOGIN</a></li>
-                    <li><a href="<?=BASEURL.'home/register'?>">REGISTER</a></li>
+                    <li><a href="<?=BASEURL.'home/pre_register'?>">REGISTER</a></li>
                 <?php endif ?>
         </ul>
     </div><!-- /sidebar-listing-meun -->
@@ -154,6 +154,7 @@
                 <!-- <li class="dropdown menu-item-has-children"><a href="<?php echo site_url(); ?>" class="current">HOME</a></li> -->
                 <li class="dropdown menu-item-has-children"><a href="<?=BASEURL?>" class="current">HOME</a></li>
                 <li class="dropdown menu-item-has-children"><a href="<?=BASEURL?>about">ABOUT US</a></li>
+                <li class="dropdown menu-item-has-children"><a href="<?=BASEURL?>contact">CONTACT</a></li>
                 <!-- <li class="dropdown menu-item-has-children"><a href="<?php echo site_url('home/properties'); ?>">PROPERTIES</a></li> -->
                 <!-- <li class="dropdown menu-item-has-children">
                     <a href="<?php echo site_url('home/properties'); ?>">PROPERTIES</a>
@@ -248,7 +249,7 @@
                     </ul>
                 </li> -->
                 <!-- <li class="dropdown menu-item-has-children"><a href="javascript://">BUSINESSES</a></li> -->
-                <li class="dropdown menu-item-has-children"><a href="javascript://" class="js-contact-btn">CONTACT</a></li>
+                
             </ul>        
         </div><!--/.navbar-collapse -->
     </div><!-- end header container -->

@@ -64,6 +64,11 @@ class Home extends CI_Controller {
 		{
 			redirect('home/index');
 		}
+		if (isset($_GET['reason'])) {
+			$data['reason'] = implode(',', $_GET['reason']);
+		}else{
+			redirect('home/pre_register?msg=Please Select atleast One Option');
+		}
 		$data['page_title'] = 'Register Page';
 		$data['meta_des'] = 'Register Page';
 		$data['meta_key'] = 'Register Page';
@@ -111,6 +116,7 @@ class Home extends CI_Controller {
 			}
 			$_POST['name'] = $_POST['fname'].' '.$_POST['lname'];
 			$_POST['password'] = md5($_POST['password']);
+			// unset($_POST['state']);
 			$resp = $this->db->insert('real_user', $_POST);
 			if ($resp)
 			{
