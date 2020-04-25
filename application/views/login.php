@@ -38,7 +38,7 @@
                         <div class="col-lg-12 col-md-12">
                             <div class="formBlock input-type">
                                 <input type="text" required name="username" id="login" />
-                                <label for="login">Username</label>
+                                <label for="login">E-mail</label>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12">

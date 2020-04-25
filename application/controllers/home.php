@@ -64,11 +64,10 @@ class Home extends CI_Controller {
 		{
 			redirect('home/index');
 		}
-		if (isset($_GET['reason'])) {
-			$data['reason'] = implode(',', $_GET['reason']);
-		}else{
+		if (!isset($_GET['reason'])) {
 			redirect('home/pre_register?msg=Please Select atleast One Option');
 		}
+		$data['reason'] = $_GET['reason'];
 		$data['page_title'] = 'Register Page';
 		$data['meta_des'] = 'Register Page';
 		$data['meta_key'] = 'Register Page';

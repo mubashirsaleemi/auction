@@ -13,6 +13,7 @@
 			<div class="piller-block">
 				<p>Traditional Listing</p>
 				<p>TBD</p>
+				<img src="<?=IMG?>trad_list.png" alt="">
 				<a href="javascript://">learn more</a>
 			</div><!-- /piller-block -->
 		</div><!-- /col-xs-5ths -->
@@ -20,6 +21,7 @@
 			<div class="piller-block">
 				<p>Classic Auction</p>
 				<p>TBD</p>
+				<img src="<?=IMG?>auction.png" alt="">
 				<a href="javascript://">learn more</a>
 			</div><!-- /piller-block -->
 		</div><!-- /col-xs-5ths -->
@@ -27,6 +29,7 @@
 			<div class="piller-block">
 				<p>Absolute Auction</p>
 				<p>TBD</p>
+				<img src="<?=IMG?>auction.png" alt="">
 				<a href="javascript://">learn more</a>
 			</div><!-- /piller-block -->
 		</div><!-- /col-xs-5ths -->
@@ -34,6 +37,7 @@
 			<div class="piller-block">
 				<p>Management</p>
 				<p>TBD</p>
+				<img src="<?=IMG?>manage.png" alt="">
 				<a href="javascript://">learn more</a>
 			</div><!-- /piller-block -->
 		</div><!-- /col-xs-5ths -->
@@ -41,6 +45,7 @@
 			<div class="piller-block">
 				<p>Crowdfunding</p>
 				<p>TBD</p>
+				<img src="<?=IMG?>crow.png" alt="">
 				<a href="javascript://">learn more</a>
 			</div><!-- /piller-block -->
 		</div><!-- /col-xs-5ths -->

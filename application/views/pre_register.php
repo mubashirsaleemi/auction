@@ -12,23 +12,23 @@
                     <form action="<?php echo site_url('Home/register'); ?>" id="pre_register_form" method="get">
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
-                                <h4>Your Primary Reason For Joining <abbr title="help">?</abbr></h4>
-                                <label class="checkbox-block">Personal Investing
-                                    <input type="checkbox" name="reason[]" value="personal investment">
+                                <h4>Your Primary Reason For Joining</h4>
+                                <label class="radio-block">Personal Investing
+                                    <input type="radio" name="reason" required value="personal investment">
                                     <span class="checkmark"></span>
-                                </label><br>
-                                <label class="checkbox-block no-need">Raising Capital As a Real Estate Company
-                                    <input type="checkbox" name="reason[]" value="Raising Capital As a Real Estate Company">
+                                </label>
+                                <label class="radio-block no-need">Raising Capital As a Real Estate 
+                                    <input type="radio" name="reason" required value="Raising Capital As a Real Estate Company">
                                     <span class="checkmark"></span>
-                                </label><br>
-                                <label class="checkbox-block">Personal Investing
-                                    <input type="checkbox" name="reason[]" value="personal investment">
+                                </label>
+                                <label class="radio-block ">Personal Investing
+                                    <input type="radio" name="reason" required value="personal investment">
                                     <span class="checkmark"></span>
-                                </label><br>
-                                <label class="checkbox-block no-need">Raising Capital As a Real Estate Company
-                                    <input type="checkbox" name="reason[]" value="Raising Capital As a Real Estate Company">
+                                </label>
+                                <label class="radio-block no-need">Raising Capital As a Real Estate 
+                                    <input type="radio" name="reason" required value="Raising Capital As a Real Estate Company">
                                     <span class="checkmark"></span>
-                                </label><br>
+                                </label>
                                 <div class="col-sm-6">
                                     <div class="formBlock">
                                         <input class="buttonColor" type="submit" value="CONTINUE" style="margin-top:24px;">

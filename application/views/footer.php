@@ -41,14 +41,15 @@
                                 <ul>
                                 </ul>
                             </div> -->
-                        <a href="javascript://"><img src="<?=IMG?>apple.png" style="width: 100px;"></a>
+                        <a href="javascript://"><img src="<?=IMG?>google.png" style="width: 100px;"></a>
                         <ul class="social">
                             <li><a href="javascript://"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="javascript://"><i class="fab fa-google-plus-g"></i></a></li>
                             <li><a href="javascript://"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="javascript://"><i class="fas fa-rss"></i></a></li>
+                            <li><a href="javascript://"><i class="fab fa-youtube"></i></a></li>
                         </ul>
-                        <a href="javascript://"><img src="<?=IMG?>google.png" style="width: 100px;"></a>
+                        <a href="javascript://"><img src="<?=IMG?>apple.png" style="width: 100px;"></a>
                     </div> <!-- /6 -->
                 </div><!-- /row -->
             </div>
@@ -177,7 +178,7 @@ $(document).ready(function(){
         nextText: '<img src="<?php echo base_url(); ?>asset/img/slider-next.png" alt="slider next" />',
         prevText: '<img src="<?php echo base_url(); ?>asset/img/slider-prev.png" alt="slider prev" />'
     });
-    $('#pre_register_form').on('submit', function(event) {
+    /*$('#pre_register_form').on('submit', function(event) {
         var count_checked = $("[name='reason[]']:checked").length; // count the checked rows
         if(count_checked == 0) 
         {
@@ -185,7 +186,7 @@ $(document).ready(function(){
             return false;
             event.preventDefault();
         }
-    });
+    });*/
 });
 </script>
 
@@ -342,10 +343,10 @@ $(function(){
 
 
 <script>
-    $('.manage-section .box').on('click', function() {
-        var name = $(this).attr('data-name');
-        var designation = $(this).attr('data-designation');
-        var inner = $(this).attr('data-inner');
+    $('.manage-section .box .open-modal').on('click', function() {
+        var name = $(this).parent('.box').attr('data-name');
+        var designation = $(this).parent('.box').attr('data-designation');
+        var inner = $(this).parent('.box').attr('data-inner');
         $('.modal .name').text(name);
         $('.modal .designation').text(designation);
         $('.modal .modal-body p').text(inner);

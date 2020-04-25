@@ -6,143 +6,180 @@
     	
         <div class="row">
 
-            <!-- start content -->
-            <div class="col-lg-9 col-md-9">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <a href="<?php echo site_url('home/EditProfileImage/'); ?>"><div class="edit-img-link"><img class="icon" src="<?php echo base_url(); ?>asset/img/icon-pencil.png" alt=""></div></a>
-                        <img class="agentImg" src="<?php echo base_url(); ?>asset/img/768x507.gif" alt="" />
-                        <div class="overview">
-                        <h4><?=$user_meta['fname']?>' INFO</h4>
-                        <ul class="overviewList">
-                            <li>Email <span><?=$user_meta['email']?></span></li>
-                            <li>Mobile Phone <span><?=$user_meta['mobile']?></span></li>
-                            <li>Office Phone <span><?=$user_meta['phone']?></span></li>
-                            <li>City <span><?=$user_meta['city']?></span></li>
-                            <li><a href="<?php echo site_url('home/EditProfile/'.$user_meta['id']); ?>">Edit Profile</a></li>
-                        </ul>
-                        <div class="divider thin" style="margin-top:0px;"></div>
-                        <ul class="socialIcons agent">
-                            <li><a href="<?=$user_meta['facebook']?>"><img src="<?php echo base_url(); ?>asset/img/icon-fb.png" alt="" /></a></li>
-                            <li><a href="<?=$user_meta['twitter']?>"><img src="<?php echo base_url(); ?>asset/img/icon-twitter.png" alt="" /></a></li>
-                            <li><a href="<?=$user_meta['google']?>"><img src="<?php echo base_url(); ?>asset/img/icon-google.png" alt="" /></a></li>
-                            <li><a href="<?=$user_meta['rss']?>"><img src="<?php echo base_url(); ?>asset/img/icon-rss.png" alt="" /></a></li>
-                        </ul>
-                        </div>
-                        <div class="formBlock">
-                            <a href="<?php echo site_url('home/add_property/'); ?>" class="buttonColor">+ADD PROPERTIES</a><br><br>
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <h1><?=$user_meta['name']?></h1>
-                        <p><?=$user_meta['about']?></p>
-                        <br>
-                    </div><!-- end col -->
-                </div><!-- end row -->
-
-                <!-- start related properties -->
-                <h4>CURRENTLY LISTED PROPERTIES</h4>
-                <div class="divider thin"></div>
-                <div class="row">
-                <?php
-                if (isset($properties) && count($properties) > 0)
-                {
-                    foreach ($properties as $key => $val)
-                    {
-                        foreach ($property_type as $key => $value)
-                        {
-                            if ($val['property_type'] == $value['property_type'])
-                            {
-                                $_property_type = $value['name'];
-                            }
-                        }
-                ?>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="propertyItem">
-                            <div class="propertyContent">
-                                <a class="propertyType" href="#"><?=$_property_type?></a>
-                                <a href="<?php echo site_url('home/property_single/'.$val['property_id']); ?>" class="propertyImgLink"><img class="propertyImg" src="<?php echo base_url(); ?>asset/img/768x507.gif" alt="" /></a>
-                                <h4><a href="property_single.html"><?=$val['address']?></a></h4>
-                                <p><?=$val['city']?>, <?=$val['state']?></p>
-                                <div class="divider thin"></div>
-                                <p class="forSale">FOR <?=$val['contract_type']?></p>
-                                <p class="price">$<?=$val['price']?></p>
-                            </div>
-                            <table border="1" class="propertyDetails">
-                                <tr>
-                                <td><img src="<?php echo base_url(); ?>asset/img/icon-area.png" alt="" style="margin-right:7px;" /><?=$val['size']?> Area</td>
-                                <td><img src="<?php echo base_url(); ?>asset/img/icon-bed.png" alt="" style="margin-right:7px;" /><?=$val['bedroom']?> Beds</td>
-                                <td><img src="<?php echo base_url(); ?>asset/img/icon-drop.png" alt="" style="margin-right:7px;" /><?=$val['bathroom']?> Baths</td>
-                                </tr>
-                            </table> 
-                        </div>
-                    </div>
-                <?php
-                    }
-                }
-                else
-                {
-                    echo "No Property Yet.";
-                }
-                ?>
-                </div><!-- end related properties row -->
-
-                <br/>
-
-                <!-- start contact form -->
-                <!-- <h4>CONTACT AGENT</h4> -->
-                <div class="divider thin"></div>
-                <!-- <form method="post" action="#">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="formBlock">
-                                <label for="name">Your Name</label><br/>
-                                <input type="text" name="name" id="name" />
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="formBlock">
-                                <label for="email">Your Email</label><br/>
-                                <input type="text" name="email" id="email" />
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="formBlock">
-                                <label for="message">Your Message</label><br/>
-                                <textarea name="message" id="message" class="formDropdown" style="width:100%;"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-lg-offset-9 col-md-4 col-md-offset-8 col-sm-4 col-sm-offset-8">
-                            <div class="formBlock">
-                                <input class="buttonColor" type="submit" value="CONTACT AGENT" />
-                            </div>
-                        </div>
-                    </div>end row
-                </form> --><!-- end form -->
-                <!-- end contact form -->
-                <br/>
-            </div><!-- end content -->
 
             <!-- start sidebar -->
-            <div class="col-lg-3 col-md-3">
-                <!-- start property types widget -->
-                <h3>PROPERTY TYPES</h3>
-                <div class="divider"></div>
-                <div class="propertyTypesWidget sidebarWidget">
+            <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="dash-sidebar">
+                    <div class="profile">
+                        <div class="img-block">
+                            <img class="agentImg" src="<?php echo base_url(); ?>asset/img/768x507.gif" alt="" />
+                        </div><!-- /img-block -->   
+                        <div class="content-block">
+                            <h5><?=$user_meta['name']?></h5>
+                            <h6>BUYER</h6>
+                        </div><!-- /img-block -->   
+                    </div>
+                    <div class="sidebar-options">
+                        <ul>
+                            <li><a href="javascript://"><i class="fas fa-home"></i>Dashboard</a></li>
+                            <li><a href="javascript://"><i class="far fa-bookmark"></i>&nbsp; Favorites</a></li>
+                            <li><a href="javascript://"><i class="fas fa-search"></i> Saved Searches</a></li>
+                            <li><a href="javascript://"><i class="far fa-bell"></i> Notifications</a></li>
+                            <li><a href="javascript://"><i class="far fa-edit"></i>Profile</a></li>
+                        </ul>
+                    </div><!-- /sidebar-options -->
+                </div><!-- /dash-sidebar -->
+                <div class="bottom-sidebar">
+                    <div class="img-block">
+                        <img class="agentImg" src="<?php echo base_url(); ?>asset/img/768x507.gif" alt="" />
+                    </div><!-- /img-block -->
+                    <p class="text-center">
+                        <small> Chris </small> <br>
+                        Your Personal Advisor <br> 
+                        <small>Free & Friendly </small> <br>
+                        <a href="">(123) 123-1234</a></p>
                     <ul>
-                    <?php
-                    foreach ($property_type as $key => $value)
-                    {
-                    ?>
-                        <li><h4><a href="<?php echo site_url('home/properties/all/'.$value['property_type'].''); ?>" style="text-transform: uppercase;"><?=$value['name']?></a></h4></li>
-                    <?php
-                    }
-                    ?>
+                        <li><a href=""><i class="fas fa-phone"></i></a> Call</li>
+                        <li><a href=""><i class="far fa-envelope"></i></a> Chat</li>
+                        <li><a href=""><i class="far fa-comment-alt"></i></a> Email</li>
                     </ul>
-                </div>
-                <!-- end property types widget -->
-
+                </div><!-- /bottom-sidebar --> 
             </div><!-- end col -->
+
+            <!-- start content -->
+            <div class="col-lg-9 col-md-9 col-sm-8">
+                <div class="right-profile-bar">
+                    <p class="heading-top">Profile</p>
+                    <p class="info-heading">Account Info</p>
+                </div>
+                <form action="" method="post">
+                    <div class="info-block-section">
+                        <p>Contact Info</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="">Title (Optional)</label>
+                                <input type="text" class="form-info" placeholder="Title">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">First Name</label>
+                                <input type="text" class="form-info" placeholder="First Name">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">Last Name</label>
+                                <input type="text" class="form-info" placeholder="Last Name">
+                            </div>
+                            <div class="col-md-4">
+                                    <label for="">Company Name (Optional)</label>
+                                    <input type="text" class="form-info" placeholder="Company Name">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">Primary Role</label>
+                                <div class="select">
+                                    <select name="" class="form-info">
+                                        <option value=""> -- Select Role -- </option>
+                                        <option value="individual">Individual</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">Assets Owned</label>
+                                <div class="select">
+                                    <select name="" class="form-info">
+                                        <option value="less">Less then $50,000</option>
+                                        <option value="less">$50,000 - $100,000</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /info-block-section -->
+                    <div class="info-block-section">
+                        <p>Address</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="">Country</label>
+                                <div class="select">
+                                    <select name="" class="form-info">
+                                        <option value=""> -- Select Country -- </option>
+                                        <option value="US">US</option>
+                                        <option value="UK">UK</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">State</label>
+                                <div class="select">
+                                    <select name="" class="form-info">
+                                        <option value="">Select State</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">City</label>
+                                <input type="text" class="form-info" placeholder="City">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">Address</label>
+                                <input type="text" class="form-info" placeholder="Address">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">Zipcode</label>
+                                <input type="text" class="form-info" placeholder="Zip Code">
+                            </div>
+                        </div>
+                    </div><!-- /info-block-section -->
+                    <div class="info-block-section">
+                        <p>Phone</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="">Primary Phone (Optional)</label>
+                                <input type="text" class="form-info" placeholder="(123) 123-1234">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">Mobile Phone (Optional)</label>
+                                <input type="text" class="form-info" placeholder="(123) 123-1234">
+                            </div>
+                        </div>
+                    </div><!-- /info-block-section -->
+                    <input type="submit" class="button-theme" value="Update Info">
+                </form>
+                <form action="" method="post">
+                    <div class="info-block-section">
+                        <p>Change Password</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="">Current Password</label>
+                                <input type="Password" class="form-info" placeholder="Current Password">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">New Password</label>
+                                <input type="Password" class="form-info" placeholder="New Password">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">Confirm New Password</label>
+                                <input type="Password" class="form-info" placeholder="Confirm New Password">
+                            </div>
+                        </div>
+                    </div><!-- /info-block-section -->
+                    <input type="submit" class="button-theme" value="Update Password">
+                </form>
+                <form action="" method="post">
+                    <div class="info-block-section">
+                        <p>Email</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="">Current Email Address</label>
+                                <input type="Password" class="form-info" placeholder="Current Email Address">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">Confirm Email Address</label>
+                                <input type="Password" class="form-info" placeholder="Confirm New Address">
+                            </div>
+                        </div>
+                    </div><!-- /info-block-section -->
+                    <input type="submit" class="button-theme" value="Update Email">
+                </form>
+            </div><!-- end content -->
+
         </div><!-- end row -->
 
     </div><!-- end container -->

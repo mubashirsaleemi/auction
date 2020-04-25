@@ -22,7 +22,9 @@
 <link href="<?=CSS?>responsive.css" rel="stylesheet" type="text/css" media="all" />
 <link href="<?=CSS?>yamm.css" rel="stylesheet" type="text/css" media="all" />
 <link href="<?=CSS?>jquery.nouislider.min.css" rel="stylesheet" type="text/css" media="all" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'> -->
 <link href="<?=CSS?>jvectormap.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 
@@ -136,6 +138,7 @@
                 ?>
                     <li class="userBtn"><a href="<?=BASEURL.'home/dash'?>" class="buttonTheme">DASHBOARD</a></li>
                     <li class="userBtn"><a href="<?=BASEURL.'home/logout'?>" class="buttonTheme">LOGOUT</a></li>
+                    <li class="userBtn" style="margin-left: 10px; padding: 0;"><a href="javascript://" style="font-size: 20px; color: #000;"><i class="fa fa-bars"></i></a></li>
                 <?php
                 }
                 else
@@ -143,7 +146,8 @@
                 ?>
                     <!-- <li class="userBtn userBtn-white"><a href="<?=BASEURL.'home/login'?>" class="buttonTheme">LOGIN</a></li> -->
                     <li class="userBtn"><a href="<?=BASEURL.'home/login'?>" class="buttonTheme" style="background-color: #fff; color: #0D2D47;">LOGIN</a></li>
-                    <li class="userBtn"><a href="<?=BASEURL.'home/register'?>" class="buttonTheme">REGISTER</a></li>
+                    <li class="userBtn"><a href="<?=BASEURL.'home/pre_register'?>" class="buttonTheme">REGISTER</a></li>
+                    <li class="userBtn" style="margin-left: 10px; padding: 0;"><a href="javascript://" style="font-size: 20px; color: #000;"><i class="fa fa-bars"></i></a></li>
                 <?php
                 }
                 ?>
@@ -249,7 +253,6 @@
                     </ul>
                 </li> -->
                 <!-- <li class="dropdown menu-item-has-children"><a href="javascript://">BUSINESSES</a></li> -->
-                
             </ul>        
         </div><!--/.navbar-collapse -->
     </div><!-- end header container -->
